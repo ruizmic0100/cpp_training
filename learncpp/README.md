@@ -75,3 +75,47 @@ List initialization has an added benefit: it disallows "narrowing conversions". 
 ```
 int width { 4.5 } // error: a number with a fractional value can't fit into an int.
 ```
+
+### Chapter 1 summary
+
+*statement*
+*function*
+*syntax*
+*comments*
+*data*
+*data type*
+*copy assignment*
+*initializtion*
+    1. copy initiliaztion
+    2. direct initialization
+    3. list initialization
+*unintialized variable*
+*undefined behavior*
+*keywords*
+*literal constanst*
+*operation*
+*unary operators*
+*binary operators*
+*ternary operators*
+*nullary operators*
+*expression*
+
+### Exiting Status Codes
+
+The C++ standard only defines the meaning of 3 status codes: 0, EXIT_SUCCESS, and EXIT_FAILURE. 0 and EXIT_SUCCESS both mean the program executed successfully. EXIT_FAILURE means the program did not execute successfully.
+
+### DRY - Don't Repeat Yourself
+If you need to do something more than once, consider how to modify your code to remove as much redundancy as possible. Variables can be used to store the results of calculations that need to be used more than once. Functions can be used to define a sequence of statments we want to execute more than once. And loops can be used to  execute a statement more than once.
+
+### WET - Write Everything Twice
+
+### Local Scope
+An identifier's scope determins wherer the identifier can be seen and used within the source code. When an identifier can be seen and used, we say it is in scope. When an identifier can not be seen , we can not use it, and we say it is out of scope.
+
+### Why use functions?
+
+    * Organization -- As a programs grows in complexitiy, having all the code live inside the main() funciton becomes increasingly complicated.
+    * Reusability -- Once a function is written, it can be called multiple time from within the program.
+    * Testing -- Because functions reduce code redundancy, there's less code to test in the first place.
+    * Extensibility -- When we need to exten our program to handle a case it didn't handle before, functions allow us to make the change in one place and have that change take effect every time the function is called.
+    * Abstraction -- In order to use a function, you only need to know its name, inputs, outputs, and where it lives.

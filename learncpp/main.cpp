@@ -16,8 +16,27 @@ std::tuple<std::size_t, std::common_type_t<T...>> sum(T... args)
     return { sizeof...(T), (args + ...) };
 }
 
+int getValueFromUser()  // this function now returns an integer value
+{
+    std::cout << "Enter an integer: ";
+    int input{};
+    std::cin >> input;
+
+    return input; // return the value the user entetered back to the caller.
+}
+
+int add(int x, int y)
+{
+    int z{ x + y };
+
+    return z;
+} // z, y, and x destroyed here.
+
 int main()
 {
+
+    int num { getValueFromUser() }; // initialize num with the return value of getValueFromUser().
+    std::cout << num << " doubled is " << num * 2 << '\n';
 
     int a; // no initializer (default initialization)
     int b = 5; // initializer (copy initialization)
@@ -33,6 +52,12 @@ int main()
     int e { 9 }, f { 10 };     // Direct brace intialization (preferred)
     int g = { 9 }, h = { 10 }; // Copy brace intialization
     int i {}, j {};            // Value initialization
+
+    int a{ 2 };         // initialize variable a with lieral value 2
+    int b{ 2 + 3 };     // initialize variable b with computed value 5
+    int c{ (2*3) + 4 }; // initialize variable c with computed value 10
+    int d{ b };         // initiliaze varaible e with variable b's value of 5
+    int e{ five() };    // initiliaze variable e with function return value 5
 
     [[maybe_unused]] int x { 5 };
 
@@ -66,3 +91,4 @@ int main()
     std::cin.get(); // Get one more char from the user (waits for user to press enter).
     return 0;
 }
+
