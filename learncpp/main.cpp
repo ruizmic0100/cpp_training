@@ -5,6 +5,8 @@
 #include <tuple>
 #include <type_traits>
 
+int add(int x, int y); // This is needed so main.cpp knows that add() is a function defined somewhere else.
+
 namespace a::b::c
 {
     inline constexpr std::string_view str{"Hello"};
