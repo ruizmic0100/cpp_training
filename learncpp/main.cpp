@@ -92,3 +92,32 @@ int main()
     return 0;
 }
 
+int getUserInput()
+{
+    std::cout << "Enter an interger: ";
+    int input{};
+    std::cin >> input;
+
+    return input;
+}
+
+int temp_main_1()
+{
+    // Get first number from user
+    int value{ getUserInput() };
+    std::cout << value << '\n'; // Debug code to ensure getUserInput() is working, we'll remove this later
+
+    // Get mathematical operation from user
+    // getMathematicalOperation();
+
+    // Get second number from user
+    // getUserInput();
+
+    // Calculate result
+    // calculateResult();
+
+    // Print result
+    // printResult();
+
+    return 0;
+}

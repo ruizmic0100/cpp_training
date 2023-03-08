@@ -119,3 +119,95 @@ An identifier's scope determins wherer the identifier can be seen and used withi
     * Testing -- Because functions reduce code redundancy, there's less code to test in the first place.
     * Extensibility -- When we need to exten our program to handle a case it didn't handle before, functions allow us to make the change in one place and have that change take effect every time the function is called.
     * Abstraction -- In order to use a function, you only need to know its name, inputs, outputs, and where it lives.
+
+### Specifying include directory for project
+
+Using g++, you can use the -I option to specify an alternate include directory,
+
+```
+g++ -o main -I/source/includes main.cpp
+```
+
+Using VS code, in your *tasks.json* configuration file, add a new line in the "Args" section,
+
+```
+"-I/source/includes",
+```
+
+### Best practices including header files
+
+> To maximize the chance that missing includes will be flagged by compiler, order your #includes as follows:
+1. The paried header file
+2. Other headers from your project
+3. 3rd party library headers
+4. Standard library headers
+
+The headers for each grouping should be sorted alphabetically
+
+
+### Design step 1: Define your goal
+
+* Allow the user to organize a list of names and associated phone numbers.
+* Generate randomized dungeons that will produce interesting looking caverns.
+* Generate a list of stock recommendations for stocks that have high dividends.
+* Model how long it takes for a ball dropped off a tower to hit the ground.
+
+### Design step 2: Define requirements
+Requirements is a fancy word for both the constraints that your solution needs to abide by (e.g. budget, timeline, space, memory, etc...), as well as the capabilities that the program must exhibit in order to meet the users' needs.
+
+* Phone number should be saved, so they can be recalled later.
+* The randomized dungeon should always contain a way to get from the entrance to an exit.
+* The stock recommendations should leverage historical pricing data.
+* The user should be able to enter the height of the tower.
+
+### Design step 3: Define your tools, target, and backup plan
+
+* Defining what target architecture and/or OS your program will run on.
+* Determining what set of tools you will be using.
+* Determining whether you will write your program alone or as part of a team.
+* Defining your testing/feedback/release strategy.
+* Determing how you will back up your code.
+
+### Design step 4: Break hard problems down into easy problems
+
+**Top down** Method:
+
+* Clean the house
+    * Vacuum the carpets
+    * Clean the bathrooms
+        * Scrub the toilet
+        * Wash the sink
+    * Clean the kitchen
+        * Clear the countertops
+        * Clean the countertops
+        * Scrub the sink
+        * Take out the trash
+
+**Bottom up** Method:
+
+*Get from bed to work
+    * Bedroom things
+        * Turn off alarm
+        * Get out of bed
+        * Pick out Clothes
+    * Bathroom things
+        * Take a shower
+        * Get dressed
+        * Brush your teeth
+    * Breakfast things
+        * Eat breakfast
+    * Transportation things
+        * Travel to work
+        * Get on your bicycle
+
+### Design step 5: Figure out the sequence of events
+
+Determine the sequence of events that will be performed.
+
+### Words of advice when writing programs
+
+**Keep your programs simple to start**
+**Add features over time**
+**Focus on one area at a time**
+**Test each piece of code as you go**
+**Don't invest in perfecting early code**
